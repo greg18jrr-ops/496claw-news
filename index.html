@@ -7,10 +7,10 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #1a1a2e; color: #eee; }
         h1 { color: #E8614A; }
         h2 { color: #E8614A; border-bottom: 2px solid #E8614A; padding-bottom: 10px; }
-        .flight-box { background: #16213e; padding: 15px; border-radius: 8px; margin: 15px 0; }
-        .flight-dest { background: #0f3460; padding: 10px; border-radius: 6px; margin: 8px 0; }
-        .flight-item { padding: 8px 0; border-bottom: 1px solid #333; }
-        .flight-item:last-child { border-bottom: none; }
+        .box { background: #16213e; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .dest-box { background: #0f3460; padding: 10px; border-radius: 6px; margin: 8px 0; }
+        .item { padding: 8px 0; border-bottom: 1px solid #333; }
+        .item:last-child { border-bottom: none; }
         a { color: #E8614A; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .price { color: #4ade80; font-weight: bold; }
@@ -20,6 +20,7 @@
         .badge-tokyo { background: #ff6b6b; color: #000; }
         .badge-osaka { background: #ffd93d; color: #000; }
         .badge-fukuoka { background: #6c5ce7; color: #fff; }
+        .section-title { display: flex; align-items: center; gap: 10px; }
     </style>
 </head>
 <body>
@@ -28,22 +29,22 @@
     <p>由董事長Sindy帶領執行長Austin與Eason、Chloe團隊共同打造！</p>
     <hr>
     
-    <h2>✈️ 機票快報（每日 08:00 更新）</h2>
-    
-    <div class="flight-box">
+    <!-- 機票快報 -->
+    <h2 class="section-title">✈️ 機票快報 <span style="font-size:0.6em;color:#888;">每日 08:00 更新</span></h2>
+    <div class="box">
         <h3>🟢 沖繩 Okinawa（最便宜！）</h3>
-        <div class="flight-dest">
-            <div class="flight-item">
+        <div class="dest-box">
+            <div class="item">
                 <span class="badge badge-okinawa">沖繩</span>
                 <a href="https://www.skyscanner.com/transport/flights/tpe/oka/20260406/20260413/?adults=1&directsonly=1">2026-04-06 ↔ 04-13</a>
                 <span class="price">NT$7,843</span>
             </div>
-            <div class="flight-item">
+            <div class="item">
                 <span class="badge badge-okinawa">沖繩</span>
                 <a href="https://www.skyscanner.com/transport/flights/tpe/oka/20260413/20260420/?adults=1&directsonly=1">2026-04-13 ↔ 04-20</a>
                 <span class="price">NT$7,843</span>
             </div>
-            <div class="flight-item">
+            <div class="item">
                 <span class="badge badge-okinawa">沖繩</span>
                 <a href="https://www.skyscanner.com/transport/flights/tpe/oka/20260427/20260504/?adults=1&directsonly=1">2026-04-27 ↔ 05-04</a>
                 <span class="price">NT$7,843</span>
@@ -51,25 +52,32 @@
         </div>
         
         <h3>🟢 其他目的地</h3>
-        <div class="flight-dest">
-            <div class="flight-item">
+        <div class="dest-box">
+            <div class="item">
                 <span class="badge badge-tokyo">東京</span>
                 <span class="date">查無優惠</span>
             </div>
-            <div class="flight-item">
+            <div class="item">
                 <span class="badge badge-osaka">大阪</span>
                 <span class="date">查無優惠</span>
             </div>
-            <div class="flight-item">
+            <div class="item">
                 <span class="badge badge-fukuoka">福岡</span>
                 <span class="date">查無優惠</span>
             </div>
         </div>
     </div>
-    
-    <p class="date">查詢時間：每日 08:00 | 來源：桃園 TPE 出發 | 資料：Amadeus API</p>
+    <p class="date">來源：桃園 TPE 出發 | 資料：Amadeus API</p>
     <hr>
     
+    <!-- AI 新聞 -->
+    <h2 class="section-title">🤖 AI 新聞 <span style="font-size:0.6em;color:#888;">每日更新</span></h2>
+    <div class="box">
+        <p>敬請期待...</p>
+    </div>
+    <hr>
+    
+    <!-- 公告 -->
     <h3>📰 最新公告</h3>
     <ul>
         <li>🏠 496Claw 房產每日快報上線</li>
