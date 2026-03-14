@@ -1,101 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <title>496Claw 小龍蝦新聞網</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #1a1a2e; color: #eee; }
-        h1 { color: #E8614A; }
-        h2 { color: #E8614A; border-bottom: 2px solid #E8614A; padding-bottom: 10px; }
-        h3 { color: #ffd93d; }
-        .box { background: #16213e; padding: 15px; border-radius: 8px; margin: 15px 0; }
-        .dest-box { background: #0f3460; padding: 10px; border-radius: 6px; margin: 8px 0; }
-        .item { padding: 8px 0; border-bottom: 1px solid #333; }
-        .item:last-child { border-bottom: none; }
-        a { color: #E8614A; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .price { color: #4ade80; font-weight: bold; }
-        .date { color: #888; font-size: 0.9em; }
-        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
-        .badge-okinawa { background: #06d6a0; color: #000; }
-        .badge-tokyo { background: #ff6b6b; color: #000; }
-        .badge-osaka { background: #ffd93d; color: #000; }
-        .badge-fukuoka { background: #6c5ce7; color: #fff; }
-        .badge-ai { background: #a855f7; color: #fff; }
-        .section-title { display: flex; align-items: center; gap: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>496Claw Daily Brief</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+    .header { background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 20px; }
+    .header h1 { margin: 0; font-size: 28px; }
+    .header .date { opacity: 0.8; margin-top: 8px; }
+    .section { background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .section h2 { margin: 0 0 16px 0; color: #1A1A2E; font-size: 18px; border-bottom: 2px solid #E8614A; padding-bottom: 8px; }
+    .item { padding: 8px 0; border-bottom: 1px solid #eee; }
+    .item:last-child { border-bottom: none; }
+    .tag { display: inline-block; background: #E8614A; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-right: 8px; }
+    a { color: #E8614A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { text-align: center; opacity: 0.6; font-size: 14px; margin-top: 30px; }
+  </style>
 </head>
 <body>
-    <img src="https://mintcdn.com/clawdhub/A8OxQpxR3DcyCCHY/assets/pixel-lobster.svg" width="80" alt="496Claw Logo">
-    <h1>🦞 496Claw 家族新聞報</h1>
-    <p>由董事長Sindy帶領執行長Austin與Eason、Chloe團隊共同打造！</p>
-    <hr>
-    
-    <!-- 機票快報 -->
-    <h2 class="section-title">✈️ 機票快報 <span style="font-size:0.6em;color:#888;">每日 08:00 更新</span></h2>
-    <div class="box">
-        <h3>🟢 沖繩 Okinawa（最便宜！）</h3>
-        <div class="dest-box">
-            <div class="item">
-                <span class="badge badge-okinawa">沖繩</span>
-                <a href="https://www.skyscanner.com/transport/flights/tpe/oka/20260406/20260413/?adults=1&directsonly=1">2026-04-06 ↔ 04-13</a>
-                <span class="price">NT$7,843</span>
-            </div>
-            <div class="item">
-                <span class="badge badge-okinawa">沖繩</span>
-                <a href="https://www.skyscanner.com/transport/flights/tpe/oka/20260413/20260420/?adults=1&directsonly=1">2026-04-13 ↔ 04-20</a>
-                <span class="price">NT$7,843</span>
-            </div>
-            <div class="item">
-                <span class="badge badge-okinawa">沖繩</span>
-                <a href="https://www.skyscanner.com/transport/flights/tpe/oka/20260427/20260504/?adults=1&directsonly=1">2026-04-27 ↔ 05-04</a>
-                <span class="price">NT$7,843</span>
-            </div>
-        </div>
-        
-        <h3>🟢 其他目的地</h3>
-        <div class="dest-box">
-            <div class="item">
-                <span class="badge badge-tokyo">東京</span>
-                <span class="date">查無優惠</span>
-            </div>
-            <div class="item">
-                <span class="badge badge-osaka">大阪</span>
-                <span class="date">查無優惠</span>
-            </div>
-            <div class="item">
-                <span class="badge badge-fukuoka">福岡</span>
-                <span class="date">查無優惠</span>
-            </div>
-        </div>
-    </div>
-    <p class="date">來源：桃園 TPE 出發 | 資料：Amadeus API</p>
-    <hr>
-    
-    <!-- AI 新聞 -->
-    <h2 class="section-title">🤖 AI 新聞 <span style="font-size:0.6em;color:#888;">每日 09:00 更新</span></h2>
-    <div class="box">
-        <h3>🦞 OpenClaw / Claude / Gemini 熱門 Repo</h3>
-        <div class="dest-box">
-            <div class="item">
-                <span class="badge badge-ai">OpenClaw</span>
-                <a href="https://github.com/openclaw/openclaw">openclaw/openclaw</a> - AI Agent 框架
-            </div>
-            <div class="item">
-                <span class="badge badge-ai">Claude</span>
-                <span class="date">敬請期待...</span>
-            </div>
-        </div>
-    </div>
-    <p class="date">來源：GitHub Trending</p>
-    <hr>
-    
-    <!-- 公告 -->
-    <h3>📰 最新公告</h3>
-    <ul>
-        <li>🏠 496Claw 房產每日快報上線</li>
-        <li>✈️ 機票監控系統上線</li>
-        <li>🦞 GitHub Pages 新聞網啟動</li>
-    </ul>
+  <div class="header">
+    <h1>🦞 496Claw Daily Brief</h1>
+    <div class="date">DATE_PLACEHOLDER</div>
+  </div>
+  
+  <div class="section">
+    <h2>📅 今日行程</h2>
+    <div class="item">No events scheduled</div>
+  </div>
+  
+  <div class="section">
+    <h2>📰 產業新聞 (BBC Tech)</h2>
+    <div class="item"><span class="tag">Games</span>Games with loot boxes to get minimum 16 age rating across Europe</div>
+    <div class="item"><span class="tag">AI</span>AI toys for children misread emotions and respond inappropriately</div>
+    <div class="item"><span class="tag">Grammarly</span>Grammarly pulls AI author-impersonation tool after backlash</div>
+    <div class="item"><span class="tag">Banking</span>Lloyds, Bank of Scotland and Halifax apps showed customers other users' transactions</div>
+    <div class="item"><span class="tag">Social</span>Social media firms asked to toughen up age checks for under-13s</div>
+  </div>
+  
+  <div class="section">
+    <h2>🔍 關鍵字動態</h2>
+    <div class="item"><span class="tag">OpenClaw</span>Lobster buffet: China's tech firms feast on OpenClaw as companies race to deploy AI agents - CNBC</div>
+    <div class="item"><span class="tag">Claude AI</span>Anthropic's Claude AI can respond with charts, diagrams, and other visuals now - The Verge</div>
+    <div class="item"><span class="tag">BMW ix3</span>Test-Driving The 2026 BMW IX3 Neue Klasse: This Car Changes Everything - Forbes</div>
+  </div>
+  
+  <div class="section">
+    <h2>📺 YouTube 追蹤</h2>
+    <div class="item"><strong>Tech With Tim</strong> - OpenClaw Optimization & Save 97% on Cost</div>
+    <div class="item"><strong>AI学长小林</strong> - OpenClaw进阶全攻略：高级玩法+飞书+Skills+安全防护</div>
+  </div>
+  
+  <div class="footer">
+    Generated by 496Claw 🦞
+  </div>
 </body>
 </html>
